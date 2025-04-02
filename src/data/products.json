@@ -1,0 +1,18 @@
+{
+	"birthdayBox": [
+		{ "productId": "cupcake", "productName": "Birthday cupcake" },
+		{ "productId": "giftcard", "productName": "$100 Visa Gift Card" },
+		{ "productId": "bdaycard", "productName": "Birthday card" }
+	],
+	"valentinesBox": [
+		{ "productId": "rose", "productName": "Red Roses Bouquet" },
+		{ "productId": "chocolate", "productName": "Box of chocolates" },
+		{ "productId": "card", "productName": "Love card" },
+		{ "productId": "perfume", "productName": "Women's perfume" }
+	],
+	"clientGiftBox": [
+		{ "productId": "wine", "productName": "Bottle of wine" },
+		{ "productId": "fruit", "productName": "Fruit basket" },
+		{ "productId": "pen", "productName": "Pen" }
+	]
+}

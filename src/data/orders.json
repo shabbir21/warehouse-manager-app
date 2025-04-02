@@ -1,0 +1,100 @@
+[
+	{
+		"id": "1",
+		"total": 120.0,
+		"date": "2023-09-15",
+		"shippingAddress": {
+			"street": "100 Dundas Street East",
+			"city": "Toronto",
+			"province": "ON",
+			"postalCode": "M5B 1H3"
+		},
+		"customer": {
+			"name": "John Smith",
+			"email": "john.smith@example.com"
+		},
+		"lineItems": [
+			{
+				"id": "101",
+				"productId": "birthdayBox",
+				"productName": "Birthday Box",
+				"price": 50.0
+			},
+			{
+				"id": "102",
+				"productId": "valentinesBox",
+				"productName": "Valentines Box",
+				"price": 70.0
+			}
+		]
+	},
+	{
+		"id": "2",
+		"total": 70.0,
+		"date": "2023-09-15",
+		"shippingAddress": {
+			"street": "100 Queen Street East",
+			"city": "Toronto",
+			"province": "ON",
+			"postalCode": "M5C 2T2"
+		},
+		"customer": {
+			"name": "Rob Smith",
+			"email": "rob.smith@example.com"
+		},
+		"lineItems": [
+			{
+				"id": "201",
+				"productId": "valentinesBox",
+				"productName": "Valentines Box",
+				"price": 70.0
+			}
+		]
+	},
+	{
+		"id": "3",
+		"total": 50.0,
+		"date": "2023-09-15",
+		"shippingAddress": {
+			"street": "100 King Street East",
+			"city": "Toronto",
+			"province": "ON",
+			"postalCode": "M5A 1K1"
+		},
+		"customer": {
+			"name": "Dan Smith",
+			"email": "dan.smith@example.com"
+		},
+		"lineItems": [
+			{
+				"id": "301",
+				"productId": "birthdayBox",
+				"productName": "Birthday Box",
+				"price": 50.0
+			}
+		]
+	},
+	{
+		"id": "4",
+		"total": 60.0,
+		"date": "2023-09-16",
+		"shippingAddress": {
+			"street": "456 Oak Avenue",
+			"city": "Anytown",
+			"province": "ON",
+			"postalCode": "L4L 8J2"
+		},
+		"customer": {
+			"name": "Alice Johnson",
+			"email": "alice.j@example.com"
+		},
+		"lineItems": [
+			{
+				"id": "401",
+				"productId": "clientGiftBox",
+				"productName": "Client Gift Box",
+				"price": 60.0
+			}
+		]
+	}
+]

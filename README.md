@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Warehouse Manager App
 
-## Getting Started
+This application automates the picking and packing workflows for a warehouse team that handles gift box orders.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **Main Page:** The application's home page presents two options: "Picking" and "Packing," allowing the user to select the desired workflow.
+-   **Picking Workflow:**
+    -   Clicking "Picking" navigates to the picking page, which displays a table of products and their quantities to be picked.
+-   **Packing Workflow:**
+    -   Clicking "Packing" navigates to the packing page, which displays a list of orders.
+    -   Clicking on an order in the list opens an overlay with detailed information about that order.
+    -   The overlay includes a "Mark Completed" button to update the order's status. This is for the user to keep a track of orders they have packed. For the sake of this assignment I am not persisting the status.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+-   Next.js
+-   Node.js
+-   React
+-   Tailwind CSS
+-   Jest
+-   React Testing Library
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup
 
-## Learn More
+1.  **Clone the repository:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    git clone <use-the-provided-url>
+    cd warehouse-manager-app
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Install dependencies (Node.js v20 or later recommended):**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3.  **Run the development server:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm run dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    The application will be available at `http://localhost:3000`.
+
+## Data
+
+-   `src/data/orders.json`: Contains mock order data.
+-   `src/data/products.json`: Contains data mapping gift boxes to individual products.
+
+## API Routes
+
+-   `/api/picking-list`: Returns the consolidated picking list.
+-   `/api/orders`: Returns a list of orders.
+-   `/api/orders/[id]`: Dynamic router to return details of a specific order.
+
+## Testing
+
+-   Unit tests are located in the `src/__tests__/` directory.
+-   To run the tests and generate coverage reports:
+
+    ```bash
+    npm run test
+    ```
+
+## Assumptions
+
+-   Each line item in an order represents a quantity of 1 for the gift box.
+-   Order selection and assignment to packers are handled by an external system. This application focuses on providing the packing information.
+-   The application does not track the picking process or the status of individual items being picked.
+-   Data integrity is assumed. The `productId` values in `orders.json` are assumed to exist as keys in `products.json`.
+-   The application is designed for a simplified workflow and does not handle complex inventory management or shipping logistics.
+
+## Limitations and Future Improvements
+
+-   This application uses mock data. A real-world application would integrate with a database.
+-   The application does not include authentication or authorization.
+-   Error handling could be further enhanced for production use.
+-   Additional features could be added, such as:
+
+    -   Filtering and sorting of orders.
+    -   Pagination for large datasets.
+    -   More detailed tracking of picking and packing progress.
+    -   User roles and permissions.
+    -   Integration with a shipping provider API.
