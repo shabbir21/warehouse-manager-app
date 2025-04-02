@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { render, screen, fireEvent, act } from '@testing-library/react'; // Import act
+import { render, screen, fireEvent, act } from '@testing-library/react';
 import PackingPage from '@/app/packing/page';
 import FullPageLoader from '@/components/FullPageLoader';
 import OrderDetailOverlay from '@/components/OrderDetailOverlay';
@@ -41,7 +41,6 @@ describe('PackingPage', () => {
 		});
 
 		await act(async () => {
-			// Wrap render and waitFor
 			render(<PackingPage />);
 		});
 
@@ -57,7 +56,6 @@ describe('PackingPage', () => {
 		fetch.mockResolvedValueOnce(new Promise(() => {}));
 
 		await act(async () => {
-			// Wrap render and waitFor
 			render(<PackingPage />);
 		});
 
@@ -70,7 +68,6 @@ describe('PackingPage', () => {
 		});
 
 		await act(async () => {
-			// Wrap render and waitFor
 			render(<PackingPage />);
 		});
 	});
@@ -90,7 +87,6 @@ describe('PackingPage', () => {
 		});
 
 		await act(async () => {
-			// Wrap render and waitFor
 			render(<PackingPage />);
 		});
 		let button = await screen.findByRole('button');

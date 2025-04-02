@@ -1,4 +1,3 @@
-// src/data/data-access.js
 import orders from './orders.json';
 import products from './products.json';
 

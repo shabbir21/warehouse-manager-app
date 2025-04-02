@@ -1,10 +1,10 @@
 /**
  * @jest-environment node
  */
-// src/tests/api/orders.test.js
 
-import { GET } from '@/app/api/orders/route'; // Adjust the import path as needed
+import { GET } from '@/app/api/orders/route';
 import { getOrders } from '@/data/data-access';
+
 // Mock the getOrders function
 jest.mock('@/data/data-access', () => ({
 	getOrders: jest.fn(async () => [

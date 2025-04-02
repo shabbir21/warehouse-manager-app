@@ -2,13 +2,6 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import Home from '@/app/page';
 
-// Mock Next.js useRouter
-jest.mock('next/navigation', () => ({
-	useRouter: jest.fn(() => ({
-		push: jest.fn(),
-	})),
-}));
-
 describe('Home Page', () => {
 	it('renders without errors', () => {
 		render(<Home />);

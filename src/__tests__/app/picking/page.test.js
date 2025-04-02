@@ -19,7 +19,6 @@ describe('PickingPage', () => {
 	});
 
 	it('displays the loader while fetching data', async () => {
-		// Make the test async
 		fetch.mockResolvedValueOnce({
 			ok: true,
 			json: async () => ({
@@ -46,7 +45,6 @@ describe('PickingPage', () => {
 		});
 
 		await act(async () => {
-			// Wrap render and waitFor
 			render(<PickingPage />);
 		});
 
@@ -66,7 +64,6 @@ describe('PickingPage', () => {
 		});
 
 		await act(async () => {
-			// Wrap render and waitFor
 			render(<PickingPage />);
 		});
 	});

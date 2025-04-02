@@ -19,7 +19,6 @@ describe('OrderDetailOverlayPage', () => {
 	});
 
 	it('loads properly if all the data is available', async () => {
-		// Make the test async
 		fetch.mockResolvedValueOnce({
 			ok: true,
 			json: async () => ({
@@ -76,7 +75,6 @@ describe('OrderDetailOverlayPage', () => {
 		});
 
 		await act(async () => {
-			// Wrap render and waitFor
 			render(<OrderDetailOverlayPage />);
 		});
 	});

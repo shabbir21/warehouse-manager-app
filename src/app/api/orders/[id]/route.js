@@ -1,4 +1,4 @@
-import { getOrderById } from '@/data/data-access'; // Import getOrder
+import { getOrderById } from '@/data/data-access';
 
 export async function GET(request, { params }) {
 	try {

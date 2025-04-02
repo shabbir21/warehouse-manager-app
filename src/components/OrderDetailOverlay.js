@@ -1,4 +1,3 @@
-// src/components/OrderDetailOverlay.js
 import { useState, useEffect } from 'react';
 
 import FullPageLoader from './FullPageLoader';
@@ -9,7 +8,7 @@ async function fetchOrderDetails(orderId) {
 		throw new Error('Failed to fetch order details');
 	}
 	const data = await response.json();
-	return data.order; // Extract the order object
+	return data.order;
 }
 
 export default function OrderDetailOverlay({ orderId, onComplete, onClose }) {
@@ -39,7 +38,7 @@ export default function OrderDetailOverlay({ orderId, onComplete, onClose }) {
 		loadData();
 	}, [orderId]);
 
-	if (!order || loading) return <FullPageLoader />; // Replace with your loader
+	if (!order || loading) return <FullPageLoader />;
 
 	return (
 		<div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
@@ -53,7 +52,6 @@ export default function OrderDetailOverlay({ orderId, onComplete, onClose }) {
 						Shipping Information
 					</h3>
 					<p>Customer Name: {order.customer.name}</p>{' '}
-					{/* Access customer.name */}
 					<p>
 						Shipping Address: {order.shippingAddress.street},{' '}
 						{order.shippingAddress.city},{' '}
